@@ -2,12 +2,21 @@
 
 > Plug vue on hoodie
 
+## Install dependencies
+
+```bash
+npm install
+```
+
+## Start Hoodie backend
+
+```bash
+npm run backend
+```
+
 ## Build Setup
 
 ``` bash
-# install dependencies
-npm install
-
 # serve with hot reload at localhost:8080
 npm run dev
 
