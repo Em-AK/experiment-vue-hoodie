@@ -4,16 +4,41 @@
   "description": "Plug vue on hoodie",
   "author": "Em-AK <emilien.ak@gmail.com>",
   "private": true,
+  "type": "app",
   "scripts": {
+    "start": "node node_modules/hoodie-server/bin/start",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
+  "engines": {
+    "node": ">=0.10.22"
+  },
+  "files": [
+    "www/"
+  ],
+  "hoodie": {
+    "plugins": [
+      "hoodie-plugin-appconfig",
+      "hoodie-plugin-email",
+      "hoodie-plugin-users"
+    ]
+  },
+  "bundleDependencies": [
+    "hoodie-plugin-appconfig",
+    "hoodie-plugin-email",
+    "hoodie-plugin-users",
+    "hoodie-server"
+  ],
   "dependencies": {
     "vue": "^1.0.21",
-    "babel-runtime": "^6.0.0"
+    "babel-runtime": "^6.0.0",
+    "hoodie-plugin-appconfig": "^2.0.1",
+    "hoodie-plugin-email": "^1.0.0",
+    "hoodie-plugin-users": "^2.2.2",
+    "hoodie-server": "^4.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
