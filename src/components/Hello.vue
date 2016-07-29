@@ -6,6 +6,10 @@
 </template>
 
 <script>
+import Hoodie from 'hoodie'
+
+let hoodie = new Hoodie()
+
 export default {
   data: function () {
     return { user: 'World' }
