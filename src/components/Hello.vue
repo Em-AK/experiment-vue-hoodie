@@ -1,19 +1,19 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <input v-model="msg">
+    <h1>Hi {{ user }}!</h1>
+    <button @click="signInMyself">Sign In</button>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'Hello World!'
+  data: function () {
+    return { user: 'World' }
+  },
+  methods: {
+    signInMyself: function () {
+      hoodie.account.signIn('emak', 'hohoho')
+      this.user = hoodie.account.username
     }
   }
 }
